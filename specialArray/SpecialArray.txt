@@ -1,0 +1,12 @@
+Special Array
+________________
+
+special if every pair of its adjacent elements contains two numbers with
+different parity. 
+____________________
+size=sizeof(arr)/sizeof(arr[0])
+____________________
+
+//inserts abandonment joke
+specialOrNot()
+checks if a given array of integers <nums> is a special array or not. 
