@@ -6,21 +6,29 @@ class Solution(object):
             for j in range(0,len(queries[0])):
                 if(j%2==0):
                     start=queries[i][j]
-                subarray=nums[start:queries[i][j]+1]
-                checker.append(self.checkSpecial(subarray))
+                    end=queries[i][(j+1)%len(queries[0])]
+                    subarray=nums[start:end+1]
+                    checker.append(self.checkSpecial(subarray))
         return checker
 
-    def checkSpecial(subarray):
+    def checkSpecial(self,subarray):
+        isSpecial=False
+        if(len(subarray)==1):
+            isSpecial=True 
         for i in range(len(subarray)-1):
+            isSpecial=False 
             if(len(subarray)==1):
-                return True
-            elif(subarray[i]%2==0 and subarray[i+1]%2!=0) or (subarray[i]%2!=0 and subarray[i+1]%2==0):
-                return True
-        return False
+               isSpecial=True 
+            if(subarray[i]%2==0 and subarray[i+1]%2!=0) or (subarray[i]%2!=0 and subarray[i+1]%2==0):
+               isSpecial=True 
+            if(isSpecial==False):
+                break
+        return isSpecial
                 
 
         
-nums= [4,3,1,6]
-queries= [[0,2],[2,3]]
-solution= Solution.isArraySpecial(Solution,nums,queries)
-print(solution)
+nums=[3,7,8]
+queries= [[0,2]]
+solution=Solution()
+result= solution.isArraySpecial(nums,queries)
+print(result)
