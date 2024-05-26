@@ -2,8 +2,8 @@
 _________________________
 
 Attendance->
-    .tab {-String made of character, each character signifies whether the **Student** was **Absent(A)**,**Late(L)** or **Present(P)**
-    }
+    &ensp; -String made of character, each character signifies whether the **Student** was **Absent(A)**,**Late(L)** or **Present(P)**
+
 Attendance Award->
-    -if **both** criterias are met:
-    i.
+    -&ensp; if **both** criterias are met:
+        &ensp; &ensp; i.
