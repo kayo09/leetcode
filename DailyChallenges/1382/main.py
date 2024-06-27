@@ -31,4 +31,6 @@ class Solution(object):
 
 #needs a makeTree method so that it could be tested without test template
 
+root = [1,null,2,null,3,null,4,null,null]
+
 
